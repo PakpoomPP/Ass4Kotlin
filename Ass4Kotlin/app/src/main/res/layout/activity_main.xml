@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Form"
+            android:textSize="25sp" />
+        //username
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username: "
+                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="textShortMessage"
+                android:hint=""/>
+        </TableRow>
+
+        //Password
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password: "
+                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/edit_pass"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint=""/>
+            </TableRow>
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender: "
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Gender: "
+                android:textSize="20sp" />
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="20sp"
+                />
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="20sp"
+                />
+        </RadioGroup>
+
+        //Email
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email: "
+                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:hint=""/>
+        </TableRow>
+
+        //BirthDay
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Birthday: "
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/text_BD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="mm / dd / yy" />
+            <Button
+                android:id="@+id/buttonBD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text="..."
+                android:onClick="showDatePickerDialog" />
+        </TableRow>
+
+        //button
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:onClick="showResult"
+            android:text="Register" />
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btn_save"
+            android:onClick="reset"
+            android:text="Reset" />
+        <TextView
+            android:id="@+id/text_show"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_save"
+            android:text="Show Information"
+            android:textSize="20sp" />
+    </RelativeLayout>
+    </TableLayout>
+</LinearLayout>
